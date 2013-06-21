@@ -1,0 +1,125 @@
+/*=====================================
+	CSS Animations
+	===================================*/
+
+@keyframes anchor
+{
+0% { top: 0; }
+100% {  top: 100%; }
+}
+
+@-webkit-keyframes anchor 
+{
+0% { top: 0; }
+100% {  top: 100%; }
+}
+
+
+@keyframes beat
+{
+0% { font-size: 1em; }
+50% { font-size: 1.5em; }
+100% {  font-size: 1em; }
+}
+
+@-webkit-keyframes beat 
+{
+0% { font-size: 1em; }
+50% { font-size: 2em; }
+100% {  font-size: 1em; }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes rotate {
+  0% { -webkit-transform: rotate(0); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes hot {
+  0% { transform: scale(.9); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(.9); }
+}
+
+@-webkit-keyframes hot {
+  0% { -webkit-transform: scale(.9); }
+  50% { -webkit-transform: scale(1.1); }
+  100% { -webkit-transform: scale(.9); }
+}
+
+@keyframes snow {
+  0% { left: 50%; top: 55%; transform: rotate(0); }
+  10% { left: 40%; }
+  40% { left: 60%; }
+  80% { left: 45%; }
+  100% { left: 60%; top: 125%; transform: rotate(360deg); }
+}
+
+@-webkit-keyframes snow {
+  0% { left: 50%; top: 55%; -webkit-transform: rotate(0); }
+  10% { left: 40%; }
+  40% { left: 60%; }
+  80% { left: 45%; }
+  100% { left: 60%; top: 125%; -webkit-transform: rotate(360deg); }
+}
+
+@keyframes snows {
+  0% { left: 45%; top: 55%; transform: rotate(0); }
+  10% { left: 40%; }
+  40% { left: 45%; }
+  80% { left: 55%; }
+  100% { left: 50%; top: 125%; transform: rotate(360deg); }
+}
+
+@-webkit-keyframes snows {
+  0% { left: 45%; top: 55%; -webkit-transform: rotate(0); }
+  10% { left: 40%; }
+  40% { left: 45%; }
+  80% { left: 55%; }
+  100% { left: 50%; top: 125%; -webkit-transform: rotate(360deg); }
+}
+
+@keyframes snowing {
+  0% { left: 55%; top: 55%; transform: rotate(0); }
+  10% { left: 55%; }
+  40% { left: 45%; }
+  80% { left: 55%; }
+  100% { left: 45%; top: 150%; transform: rotate(360deg); }
+}
+
+@-webkit-keyframes snowing {
+  0% { left: 55%; top: 55%; -webkit-transform: rotate(0); }
+  10% { left: 55%; }
+  40% { left: 45%; }
+  80% { left: 55%; }
+  100% { left: 45%; top: 150%; -webkit-transform: rotate(360deg); }
+}
+
+@keyframes rock {
+	0% { left: -.02em; }
+	50% { left: .02em; }
+	100% { left: -.02em; }
+}
+
+@-webkit-keyframes rock {
+	0% { left: -.02em; }
+	50% { left: .02em; }
+	100% { left: -.02em; }
+}
+
+
+@keyframes sonarEffect {
+	0% { opacity: 0.1; }
+	40% {	opacity: 0.3; box-shadow: 0 0 2px 2px rgba(0, 245, 255, 0.2), 0 0 0 2px rgba(200,200,200,0.3); }
+	100% { opacity: 0; box-shadow: 0 0 4px 5px rgba(0, 245, 255, 0.4), 0 0 0 5px rgba(200,200,200,0.4); transform: scale(1.15); }
+}
+
+@-webkit-keyframes sonarEffect {
+	0% { opacity: 0.1; }
+	40% {	opacity: 0.3; box-shadow: 0 0 2px 2px rgba(0, 245, 255, 0.2), 0 0 0 2px rgba(200,200,200,0.3); }
+	100% { opacity: 0; box-shadow: 0 0 4px 5px rgba(0, 245, 255, 0.4), 0 0 0 5px rgba(200,200,200,0.4); -webkit-transform: scale(1.15); }
+}

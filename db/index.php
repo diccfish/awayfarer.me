@@ -1,21 +1,22 @@
 <?php
 
-	$pageTitle = "Ckay Travel";
-	$section = "home";
-	include('app/config.php');
-	include('app/header.php');
-	include('insert.php');
-?>
+	include('../app/config.php');
+	
+	$romance = trim($_POST['romance']);
+	$adventure = trim($_POST['adventure']);
+	$weather = trim($_POST['weather']);
+	$budget = trim($_POST['budget']);
+	
+	$match = array();
+	$allmatches = array();
 
-	<div class="wrapper">
-		<form action="insert.php" method="post">
-			Code: <input type="text" name="code">
-			Name: <input type="text" name="name">
-			<br />
-			Party: <input type="text" name="party">
-			Family: <input type="text" name="family">
-			<input type="submit">
-		</form>
-	</div>
-			
-<?php include('app/footer.php') ?>
+	$matching = mysqli_query($con, "select code, name, coordinates from places Where romance='$romance' AND adventure='$adventure' AND weather='$weather' AND budget='$budget' ");
+	$allmatching = mysqli_query($con, "select * from places Where romance='$romance' OR adventure='$adventure' OR weather='$weather' OR budget='$budget' ORDER BY name asc");
+
+	  while (($row = mysqli_fetch_array($matching))) {
+		  $match[] = $row;
+	  }
+
+	  while (($allrow = mysqli_fetch_array($allmatching))) {
+	  	$allmatches[] = $allrow;
+	  }

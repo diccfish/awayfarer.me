@@ -1,0 +1,46 @@
+/* Fonts */
+$primaryFont: 'Raleway', sans-serif;
+$headerFont: 'yumaregular', sans-serif;
+
+/* Colors */
+$primaryColor: rgb(25,255,109);
+
+/* Text Shadow on Headers */
+@mixin text-shadow($textShadow...) {
+	// defining prefixes so we can use them in mixins below
+	$prefixes:      ("-webkit", "-moz", "-ms",  "");
+  @each $prefix in $prefixes {
+    #{$prefix}-text-shadow: $textShadow;
+  }
+  text-shadow: $textShadow;
+}
+
+$textShadow: 1px 1px 0 rgba(255,255,255,0.8), 1px -1px 0 rgba(255,255,255,0.8), -1px 1px 0 rgba(255,255,255,0.8), -1px -1px 0 rgba(255,255,255,0.8), 1px 2px 3px #333;
+
+/* Transition on Stages */
+@mixin transition($transition...) {
+	// defining prefixes so we can use them in mixins below
+	$prefixes:      ("-webkit", "-moz", "-ms",  "");
+  @each $prefix in $prefixes {
+    #{$prefix}-transition: $transition;
+  }
+  transition: $transition;
+}
+
+/* Animations */
+@mixin animation($animation...) {
+	// defining prefixes so we can use them in mixins below
+	$prefixes:      ("-webkit", "-moz", "-ms",  "");
+  @each $prefix in $prefixes {
+    #{$prefix}-animation: $animation;
+  }
+}
+
+/* Transform */
+@mixin transform($transform...) {
+	// defining prefixes so we can use them in mixins below
+	$prefixes:      ("-webkit", "-moz", "-ms",  "");
+  @each $prefix in $prefixes {
+    #{$prefix}-transform: $transform;
+  }
+}

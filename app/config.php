@@ -1,11 +1,11 @@
 <?php 
 
-	$mysql_host = "mysql6.000webhost.com";
-	$mysql_database = "a9999905_travel";
-	$mysql_user = "a9999905_travel";
+	$mysql_host = "localhost";
+	$mysql_user = "root";
 	$mysql_password = "Manutd11";
+	$mysql_database = "places";
 
-	$con = mysqli_connect("mysql6.000webhost.com","a9999905_travel","Manutd11","a9999905_travel");
+	$con = mysqli_connect($mysql_host, $mysql_user, $mysql_password, $mysql_database);
 	
 	// Check connection
 	if (mysqli_connect_errno($con))

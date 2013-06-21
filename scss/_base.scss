@@ -1,0 +1,383 @@
+/*=====================================
+	Body and Headers
+===================================*/
+	
+body { 
+	font-family: $primaryFont; 
+	margin: 0; 
+	padding: 0; 
+}
+
+h1, h2 { 
+	font-family: $headerFont; 
+	font-weight: normal; 
+}
+h1 { 
+	color: rgb(255,109,25); 
+	font-size: 4em; 
+	letter-spacing: .1em; 
+	@include text-shadow($textShadow);
+}
+h2 { 
+	color: #19abff; 
+	font-size: 2.5em; 
+	letter-spacing: .2em; 
+	@include text-shadow($textShadow);
+}
+h3 { font-family: sans-serif; }
+
+
+/*=====================================
+	Home
+===================================*/
+
+.intro {
+	text-align: center;
+}
+
+.icon-anchor {
+	color: $primaryColor;
+	font-size: 4em;
+	@include text-shadow($textShadow);
+	position: absolute;
+	animation: anchor 7s 1 linear 5s;
+	-webkit-animation: anchor 7s 1 linear 5s;
+}
+	
+	
+/*=====================================
+	App Home
+===================================*/
+
+#container {
+	color: #333;
+	padding: 0;
+	&> div {
+		background: $primaryColor;
+		@include transition(height 1s ease);
+	}
+}
+
+.container-up {
+	height: 70% !important;
+	@include transition(height 1s ease);
+}
+
+.main {
+  	margin: 3em auto 0;
+  	position: relative;
+  	width: 90%;
+ 	label {
+		margin-bottom: 1em;
+	}
+}
+
+.breadcrumbs {
+	display: none;
+}
+
+
+/*=====================================
+	Quiz
+===================================*/
+
+label {
+	background: rgba(255,193,117,0.8);
+	box-shadow: 2px 2px #ffc175, -2px 2px #ffc175, 2px -2px #ffc175, -2px -2px #ffc175;
+	display: inline-block;
+	line-height: 6em;
+	margin: 0 .5%;
+	padding: 0 .5%;
+	position: relative;
+	text-align: center;
+	width: 16.5%;
+}
+
+input[type=radio] {
+	opacity: 0;
+	left: -2px;
+	height: 99%;
+	position: absolute;
+	top: -3px;
+	width: 99%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	&:hover {
+		cursor: pointer;
+	}
+	&:checked {
+		opacity: 1;
+	}
+	&:checked:after {
+		background: rgba(0,0,0,0.5);
+		content: "";
+		height: 100%;
+		position: absolute;
+		width: 100%;
+		animation: sonarEffect .65s ease-out 50ms;
+		-webkit-animation: sonarEffect .65s ease-out 50ms;
+	}
+}
+
+.back, .next { 
+	background: url(../img/cutcube.png) repeat; 
+	content: " ";
+	top: 0; 
+	color: #333; 
+	height: 1.2em; 
+	padding: 2.5%; 
+	position: absolute;
+	width: 15%;
+}
+.next::before {
+	border-left: 1.2em solid #FFF;
+	border-top: 1.5em solid rgba(44, 44, 44, 0);
+	border-bottom: 1.5em solid rgba(44, 44, 44, 0);
+	content: "";
+	top: 0.1em;
+	right: 0.1em;
+	position: absolute;
+}
+.back {
+	text-align: right;
+}
+.back::before {
+	top: 0.1em;
+	left: 0.1em;
+	position: absolute;
+	border-right: 1.2em solid #6eafe0;
+	border-top: 1.5em solid rgba(44, 44, 44, 0);
+	border-bottom: 1.5em solid rgba(44, 44, 44, 0);
+	content: "";
+}
+
+.show-current-results, .close-current-results {
+	display: none;
+}
+
+
+/*=====================================
+	Climate Icons
+===================================*/
+
+.icon-heart {
+	color: red;
+	@include animation(beat 2s infinite);
+	@include transform(translate3d(0, 0, 0));
+}
+
+.climate-icon {
+	line-height: normal;
+	padding: 0 2.5%;
+	position: relative;
+	text-align: left;
+	width: auto;
+}
+
+.hot {
+	color: red;
+}
+
+.warm {
+	color: yellow;
+}
+
+.i-sunny:before {
+	color: yellow;
+	position: absolute;
+	top: 0;
+	@include animation(hot 5s infinite linear);
+}
+
+.i-sun:before {
+	@include animation(rotate 10s infinite linear);
+	@include transform(translate3d(0, 0, 0));
+}
+
+.i-sun:first-of-type:before {
+	@include animation(hot 5s infinite);
+	@include transform(50% 50%);
+}
+
+.i-basecloud {
+	position: relative;
+}
+
+.i-basecloud:before {
+	color: #fff;
+}
+
+.snow .i-frosty:before {
+	color: #fff;
+	position: absolute;
+}
+
+.snow .i-frosty:nth-of-type(3n+1):before {
+	font-size: 2em;
+	top: -2000px;
+	@include animation(snow 7s infinite linear);
+}
+.snow .i-frosty:nth-of-type(3n+2):before {
+	font-size: 1.75em;
+	opacity: .825;
+	top: -2000px;
+	@include animation(snows 5s infinite linear 1s);
+}
+.snow .i-frosty:nth-of-type(3n+3):before {
+	font-size: 1.375em;
+	opacity: .675;
+	top: -2000px;
+	@include animation(snowing 8s infinite linear 3s);
+}
+.snow .i-frosty:nth-of-type(4n):before {
+	animation-delay: 4s;
+	-webkit-animation-delay: 4s;
+}
+.snow .i-frosty:nth-of-type(5n):before {
+	animation-delay: 6s;
+	-webkit-animation-delay: 6s;
+}
+.snow .i-frosty:nth-of-type(6n):before {
+	animation-delay: 8s;
+	-webkit-animation-delay: 8s;
+}
+
+.i-windysnowcloud:before {
+	color: #fff;
+	position: relative;
+	@include animation(rock 1s infinite linear);
+}
+
+.i-windysnow:before {
+	color: #fff;
+	position: absolute;
+	top: 0;
+}
+
+
+/*=====================================
+	Current Results
+===================================*/
+	
+#current-results {
+	background: #ccc;
+	bottom: 0;
+	box-shadow: inset 0 1px 10px #333;
+	position: fixed;
+	overflow: hidden;
+	width: 100%;
+	@include transition(height 1s ease);
+}
+
+.current-results-open {
+	height: 30%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	@include transition(height 1s ease);
+}
+
+#current-results-map-wrap {
+	bottom: 0;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+
+
+/*=====================================
+	Results Page
+===================================*/
+
+.results-page-left {
+	background: rgba(0,0,0,0);
+}
+
+.match, .allmatch {
+	display: inline-block;
+	margin: 0 1%;
+	position: relative;
+	width: 98%;
+	z-index: 999;
+}
+.allmatch {
+	background: rgba(0,0,0,0.2);
+}
+.match {
+	background: rgba(20,250,250,0.5);
+}
+
+.match a {
+	color: #333;
+}
+
+.first, .one, .two, .three {
+	display: inline-block;
+	height: 2em;
+	line-height: 2em;
+	font-size: .8125em;
+	padding: 0 1%;
+	position: relative;
+	width: 18%;
+}
+.first {
+	height: 3em;
+	line-height: 3em;
+}
+.one {
+	background: #eee;
+}
+
+.two {
+	background: #ccc;
+}
+
+.three {
+	background: #999;
+}
+
+.map-wrap {
+	height: 200px;
+}
+
+#map {
+	bottom: 0;
+	height: 100%;
+	position: absolute;
+	top: 2em;
+ 	width: 100%;
+}
+
+
+/*=====================================
+	Single Result Page
+===================================*/
+
+.bg {
+	background-size: cover;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+.result-wrap {
+	background: rgba(0,0,0,0.2);
+	padding: 1em 10%;
+	width: 80%;
+}
+.result-wrap h1 {
+	margin-top: 0;
+}
+
+.images {
+	background: rgba(255,255,255,0.2);
+	padding: 1em 10%;
+	width: 80%;
+}
+.images img {
+	box-shadow: 0 2px 1px rgba(255,255,255,0.8);
+	width: 20%;
+}

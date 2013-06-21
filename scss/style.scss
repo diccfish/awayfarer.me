@@ -1,0 +1,57 @@
+/* ==============================
+    the bass shit, and dem mix-ens 
+    =============================*/
+// import mixins
+@import "mixins";
+
+// import fonts
+@import "fonts";
+
+// styles in base.scss
+@import "base";
+
+
+/* ==============================
+    landscape mobile and big ole fatass screens 
+    =============================*/
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+	@import "481up";
+}
+
+
+/* ==============================
+    table lets
+    =============================*/
+@media only screen and (min-width: 768px) {
+	@import "768up";
+}
+
+
+/* ==============================
+    computing devices such as lab tops (for scientists) and desktops (for students)
+    =============================*/
+@media only screen and (min-width: 1024px) {
+	@import "1024up";
+}
+
+
+/* ==============================
+    high resolution.
+      will try to use svgs, em, icon fonts, ....
+      but this is mainly for background images and what not, so that shit does not look like shit on nice screens.
+      because, seriously, who does not browse with a high res device these days?
+      maybe blind people, but dont forget about them either! lets make this shit ada compliant too, okay? cool.
+      fart.
+    =============================*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+	@import "2x";
+}
+
+
+/* ==============================
+    CSS animations
+    =============================*/
+@import "keyframes";
+    

@@ -1,0 +1,64 @@
+@media screen and (min-width: 768px) {
+	.breadcrumbs {
+		counter-reset: flag;
+		display: inline-block;
+		overflow: hidden;
+		padding: 20px;
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 9999;
+		a {
+			float: left;
+			padding-left: 1em;
+			&:before {
+				content: counter(flag);
+				counter-increment: flag;
+			}
+		}
+	}
+	
+	.back, .next { 
+		background: #02dbfd; 
+		bottom: 0; 
+		color: #333; 
+		line-height: 0; 
+		padding: 2.5%; 
+		position: absolute; 
+	}
+	.back { 
+		left:0; 
+	}
+	.next { 
+		right: 0; 
+	}
+	
+	.show-current-results, .close-current-results { 
+		background: #02dbfd; 
+		bottom: 0; 
+		color: #333; 
+		left: 40%; 
+		line-height: 0; 
+		padding: 2.5%; 
+		position: absolute; 
+		right: 40%; 
+		text-align: center; 
+		width: 20%; 
+	}
+	.show-current-results:after {
+		content: "See Current Results";
+	}
+	.close-current-results:after {
+		content: "Close Current Results";
+	}
+	
+	.map-wrap {
+		height: 400px;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		width: 100%;
+	}
+
+
+}
