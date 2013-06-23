@@ -17,4 +17,4 @@
 	<script src="../js/jQuery-2.0.1.min.js"></script>   
 </head>
 
-<body style="overflow-x:hidden; overflow-y:hidden;">
+<body>

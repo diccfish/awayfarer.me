@@ -1,0 +1,108 @@
+
+.icon-anchor {
+	color: $primaryColor;
+	font-size: 4em;
+	@include text-shadow($textShadow);
+	position: absolute;
+	animation: anchor 7s 1 linear 5s;
+	-webkit-animation: anchor 7s 1 linear 5s;
+}
+
+
+/*=====================================
+	Climate Icons
+===================================*/
+
+.icon-heart {
+	color: red;
+	@include animation(beat 2s infinite);
+	@include transform(translate3d(0, 0, 0));
+}
+
+.climate-icon {
+	line-height: normal;
+	padding: 0 2.5%;
+	position: relative;
+	text-align: left;
+	width: auto;
+}
+
+.hot {
+	color: orange;
+}
+
+.warm {
+	color: yellow;
+}
+
+.i-sunny:before {
+	color: yellow;
+	position: absolute;
+	top: 0;
+	@include animation(hot 5s infinite linear);
+}
+
+.i-sun:before {
+	@include animation(rotate 10s infinite linear);
+	@include transform(translate3d(0, 0, 0));
+}
+
+.i-sun:first-of-type:before {
+	@include animation(hot 5s infinite);
+	@include transform(50% 50%);
+}
+
+.i-basecloud {
+	position: relative;
+}
+
+.i-basecloud:before {
+	color: #fff;
+}
+
+.snow .i-frosty:before {
+	color: #fff;
+	position: absolute;
+}
+
+.snow .i-frosty:nth-of-type(3n+1):before {
+	font-size: 2em;
+	top: -2000px;
+	@include animation(snow 7s infinite linear);
+}
+.snow .i-frosty:nth-of-type(3n+2):before {
+	font-size: 1.75em;
+	opacity: .825;
+	top: -2000px;
+	@include animation(snows 5s infinite linear 1s);
+}
+.snow .i-frosty:nth-of-type(3n+3):before {
+	font-size: 1.375em;
+	opacity: .675;
+	top: -2000px;
+	@include animation(snowing 8s infinite linear 3s);
+}
+.snow .i-frosty:nth-of-type(4n):before {
+	animation-delay: 4s;
+	-webkit-animation-delay: 4s;
+}
+.snow .i-frosty:nth-of-type(5n):before {
+	animation-delay: 6s;
+	-webkit-animation-delay: 6s;
+}
+.snow .i-frosty:nth-of-type(6n):before {
+	animation-delay: 8s;
+	-webkit-animation-delay: 8s;
+}
+
+.i-windysnowcloud:before {
+	color: #fff;
+	position: relative;
+	@include animation(rock 1s infinite linear);
+}
+
+.i-windysnow:before {
+	color: #fff;
+	position: absolute;
+	top: 0;
+}
