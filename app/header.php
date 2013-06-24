@@ -14,7 +14,7 @@
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 	<link href='http://api.tiles.mapbox.com/mapbox.js/v1.0.0/mapbox.css' rel='stylesheet' />
 
-	<script src="../js/jQuery-2.0.1.min.js"></script>   
+	<script src="/js/jQuery-2.0.1.min.js"></script>   
 </head>
 
 <body>

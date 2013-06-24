@@ -90,7 +90,6 @@
 		  		<label class="climate-icon mild i-basecloud">
 		  			<span class="i-sunny"></span>
 		  			<input type="radio" class="weather" name="weather" value="mild">
-		  			mild
 		  		</label>
 		  		<label class="climate-icon snow i-basecloud">
 		  				<span class="i-frosty"></span>
@@ -105,7 +104,6 @@
 		  		<label class="climate-icon cold i-windysnowcloud">
 		  				<span class="i-windysnow"></span>
 		  			<input type="radio" class="weather" name="weather" value="cold">
-		  			cold
 		  		</label>
 	    </section>
 	    

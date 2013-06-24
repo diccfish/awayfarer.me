@@ -1,5 +1,5 @@
 <?php
-
+	// Perfect Match
 	if(isset($match)) {
 		echo '<div class="match">';
 		  foreach($match as $result) {
@@ -14,7 +14,7 @@
 
  		foreach($allmatches as $result) {
  			
- 			// Match Six
+ 			// Match at least Six
 			if ( 
 				( $result['romance'] == $romance AND $result['adventure'] == $adventure AND $result['weather'] == $weather AND $result['budget'] == $budget AND $result['metropolis'] == $metropolis AND ( $result['historical'] == $historical || $result['population'] == $population ) )
 				OR 
@@ -26,16 +26,20 @@
 				OR 
 				( $result['adventure'] == $adventure AND $result['weather'] == $weather AND $result['budget'] == $budget AND $result['metropolis'] == $metropolis AND $result['historical'] == $historical AND ( $result['romance'] == $romance || $result['population'] == $population ) )
 				OR 
-				( $result['adventure'] == $adventure AND $result['population'] == $population AND $result['weather'] == $weather AND $result['population'] == $population AND $result['metropolis'] == $metropolis AND ( $result['romance'] == $romance || $result['budget'] == $budget ) )
+				( $result['adventure'] == $adventure AND $result['historical'] == $historical AND $result['weather'] == $weather AND $result['population'] == $population AND $result['budget'] == $budget AND ( $result['romance'] == $romance || $result['metropolis'] == $metropolis ) )
+				OR 
+				( $result['adventure'] == $adventure AND $result['historical'] == $historical AND $result['weather'] == $weather AND $result['population'] == $population AND $result['metropolis'] == $metropolis AND ( $result['romance'] == $romance || $result['budget'] == $budget ) )
 				OR 
 				( $result['adventure'] == $adventure AND $result['population'] == $population AND $result['budget'] == $budget AND $result['population'] == $population AND $result['metropolis'] == $metropolis AND ( $result['romance'] == $romance || $result['weather'] == $weather ) )
 				OR 
-				( $result['adventure'] == $adventure AND $result['population'] == $population AND $result['budget'] == $budget AND $result['population'] == $population AND $result['weather'] == $weather AND ( $result['romance'] == $romance || $result['metropolis'] == $metropolis ) ) )
+				( $result['adventure'] == $adventure AND $result['budget'] == $budget AND $result['weather'] == $weather AND $result['population'] == $population AND $result['metropolis'] == $metropolis AND ( $result['romance'] == $romance || $result['historical'] == $historical ) )
+				OR 
+				( $result['historical'] == $historical AND $result['budget'] == $budget AND $result['weather'] == $weather AND $result['population'] == $population AND $result['metropolis'] == $metropolis AND ( $result['romance'] == $romance || $result['adventure'] == $adventure ) ) )
 				{
 					echo "<div class='six'><i class='icon-smile'></i><a href='locations/$result[code].php' target='_blank'>$result[name]</a></div>";
 			}
  			 			
-	  		// Match Two
+	  		// Match at least Two
 	  		elseif ( ( $result['romance'] == $romance AND ( $result['adventure'] == $adventure || $result['weather'] == $weather || $result['budget'] == $budget || $result['metropolis'] == $metropolis || $result['historical'] == $historical || $result['population'] == $population ) ) 
 	  				OR
 	  				( $result['adventure'] == $adventure AND ( $result['weather'] == $weather || $result['budget'] == $budget || $result['metropolis'] == $metropolis || $result['historical'] == $historical || $result['population'] == $population ) )

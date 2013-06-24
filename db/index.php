@@ -2,10 +2,11 @@
 
 	include('../app/config.php');
 	
-	$romance = trim($_POST['romance']);
-	$adventure = trim($_POST['adventure']);
-	$weather = trim($_POST['weather']);
-	$budget = trim($_POST['budget']);
+	// User Inputs
+	$romance = $_POST['romance'];
+	$adventure = $_POST['adventure'];
+	$weather = $_POST['weather'];
+	$budget = $_POST['budget'];
 	$metropolis = $_POST['metropolis'];
 	$historical = $_POST['historical'];
 	$population = $_POST['population'];

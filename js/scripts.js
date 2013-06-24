@@ -1,7 +1,7 @@
-// Me Scripts
+// Mother Fucking Scripts
   
-  // Swipe Events
-  $(function(){
+  // Swipe Events -- in dev
+  $( function() {
 	  $('#stage1').on( 'swipeleft', swipeleftHandler );
 	 	
 	 	function swipeleftHandler(event){
@@ -12,7 +12,7 @@
   // Checks for mobile to remove overflow
   var width = $(window).width();
     if (width < 685) {
-      $('body').css( {'overflow-x' : 'auto', 'overflow-y' : 'scroll' } );
+      $('body').css( {'overflow-x' : 'auto', 'overflow-y' : 'auto' } );
     }
     else {
       $('body').css( {'overflow-x' : 'auto', 'overflow-y' : 'hidden'} );
